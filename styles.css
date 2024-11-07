@@ -1,0 +1,211 @@
+/* Style dasar */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Gaya untuk tab dan menu aktif */
+.active-tab {
+    background-color: #dc6601;
+    color: #fff;
+}
+
+.active-menu {
+    color: #dc6601;
+}
+
+#nav {
+    color: #dc6601;
+}
+
+/* Prevent Navbar Overlap */
+#landing-page {
+    padding-top: 60px;
+}
+
+/* Navbar responsif pada layar kecil */
+@media (max-width: 768px) {
+    .navbar {
+        font-size: 1.5em;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navbar i, .navbar .text-xl {
+        font-size: 1.5em;
+    }
+}
+
+/* Padding konten utama */
+.main-content {
+    padding-top: 80px;
+}
+
+/* Bagian harga tetap horizontal */
+#harga {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px 20px 30px 20px; /* Padding ditambah */
+    margin: 10px 0;
+}
+
+/* Aturan untuk item harga */
+.harga-item {
+    background-color: #dc6601;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    min-width: 200px;
+    max-width: 200px;
+    margin: 10px 10px;
+    text-align: center;
+    vertical-align: top;
+    color: #fff;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    transform-origin: center center;
+}
+
+.harga-item:hover, .harga-item:active {
+    transform: scale(1.05);
+    background-color: #e56700;
+}
+
+/* Font di bagian harga */
+.harga-item h3 {
+    font-size: 1em;
+    margin: 5px 0;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: ellipsis;
+    line-height: 1.2;
+}
+
+.harga-item p {
+    font-size: 0.9em;
+    margin: 5px 0;
+    white-space: normal;
+}
+
+/* Gambar responsif tetap berada di dalam kotak harga */
+.harga-item img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* Bagian tutorial vertikal */
+.tutorial-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px; /* Padding ditambah */
+    margin: 10px 0;
+    overflow-x: hidden;
+    white-space: normal;
+}
+
+/* Aturan untuk item tutorial */
+.tutorial-item {
+    background-color: #dc6601;
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    margin: 10px 0;
+    text-align: left;
+    color: #fff;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: block;
+    transform-origin: center center;
+}
+
+.tutorial-item h3 {
+    font-size: 1.1em;
+    margin: 5px 0;
+    line-height: 1.2;
+}
+
+.tutorial-item p {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.tutorial-item img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.tutorial-item:hover, .tutorial-item:active {
+    transform: scale(1.02);
+    background-color: #e56700;
+}
+
+/* Footer menu */
+.footer-menu {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Ukuran font untuk batas maksimum 2500px */
+@media (min-width: 2500px) {
+    body, .navbar, .main-content, .footer-menu {
+        font-size: 18px;
+    }
+}
+
+/* Responsif untuk perangkat kecil */
+@media (max-width: 768px) {
+    #harga {
+        padding: 16px 16px 24px 16px;
+    }
+
+    .harga-item, .tutorial-item {
+        margin: 8px 0;
+        font-size: 0.95em;
+        padding: 12px;
+    }
+
+    .harga-item h3, .tutorial-item h3 {
+        font-size: 1.2em;
+    }
+}
+
+/* Responsif pada layar sangat kecil */
+@media (max-width: 600px) {
+    .harga-item, .tutorial-item {
+        font-size: 0.85em;
+        padding: 8px;
+        margin: 5px 0;
+    }
+
+    .harga-item h3, .tutorial-item h3 {
+        font-size: 1.1em;
+    }
+
+    .harga-item p, .tutorial-item p {
+        font-size: 0.8em;
+    }
+
+    .tutorial-item img {
+        max-width: 100%;
+    }
+}
+
+/* Untuk perangkat dengan layar sentuh */
+@media (hover: none) {
+    .harga-item:active, .tutorial-item:active {
+        transform: scale(1.05);
+        background-color: #e56700;
+    }
+}
